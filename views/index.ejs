@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="upperBody">
+        <h1 class="head">ODIN MESSAGE</h1>
+        <button onclick="window.location.href='/new'" class="addBtn">ADD</button>
+    </div>
+    <div class="msg1">
+    <% messages.forEach((message) => { %>
+        <div class="msg2">
+            <div class="formflex">
+                <h3><%= message.text %></h3>
+                <form method="post" action="/delete/<%= message.id %>">
+                    <button class="bin" type="submit"><i class="fa-solid fa-trash-can" style="color: rgb(250, 250, 250);"></i>
+                </button>
+                </form>
+            </div>
+            <p> <%=message.user%> </p>
+            <p class="time"> <%= message.added %> </p>
+        </div>
+            <% }) %>
+        </div>
+</body>
+</html>

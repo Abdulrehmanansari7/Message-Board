@@ -1,0 +1,68 @@
+body {
+  height: 90vh;
+  box-sizing: border-box;
+  font-family: monospace;
+  background-color: black;
+  color: white;
+}
+
+.upperBody {
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  border-bottom: 3px dotted white;
+  /* border-style: dotted; */
+}
+
+.head {
+  /* color: white; */
+  font-size: 30px;
+}
+
+.addBtn {
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 3px dotted white;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.msg1 {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  border-bottom: 2px dotted white;
+  scrollbar-width: none;
+}
+
+.msg2 {
+  border: 3px dotted white;
+  padding: 0 5px;
+  margin: 5px 0px;
+  line-height: 10%;
+}
+
+.time {
+  width: 70%;
+  line-height: 15px;
+}
+
+.formflex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dotted white
+}
+
+.bin{
+  padding: 5px;
+  background: none;
+  border: none;
+}

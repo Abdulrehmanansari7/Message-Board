@@ -1,0 +1,22 @@
+
+export let messages = [
+  {
+    id: crypto.randomUUID(),
+    text: "Hi there!",
+    user: "Amando",
+    added: new Date()
+  },
+  {
+    id: crypto.randomUUID(),
+    text: "Hello World!",
+    user: "Charles",
+    added: new Date()
+  }
+];
+
+
+export const deleteMsg = (id) => {
+    messages = messages.filter((m) => {
+        return m.id !== id
+    })
+}
