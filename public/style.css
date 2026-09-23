@@ -29,11 +29,14 @@ body {
   background-color: black;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.15s,transform 0.15s ease-in-out;
 }
 
 .msg1 {
-  height: 90%;
+  padding-top: 10px;
+  height: 85%;
   display: flex;
+  gap: 15px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -65,4 +68,16 @@ body {
   padding: 5px;
   background: none;
   border: none;
+  transition: transform 0.15s ease;
 }
+
+.bin:active{
+  transform: scale(0.8);
+}
+
+.addBtn:active{
+  transform: scale(0.8);
+  background-color: white;
+  color: black;
+}
+

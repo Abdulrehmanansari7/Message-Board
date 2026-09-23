@@ -37,4 +37,11 @@ body{
   border-radius: 20px;
   padding: 5px 15px;
   cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+
+.formdiv form button:active{
+  background-color: white;
+  color: black;
+  transform: scale(0.8);
 }
