@@ -1,6 +1,7 @@
 import { messages } from "../db.js";
+import { deleteMsg } from "../db.js";
 
-const postMsg = async (req,res) => {
+export const postMsg = async (req,res) => {
     const userA = await req.body.authorName;
       const textA = await req.body.authorText;
     
@@ -14,4 +15,9 @@ const postMsg = async (req,res) => {
       res.redirect("/");
 }
 
-export default postMsg
+
+export const removeMsg = async (req,res) => {
+    const id = await req.params.id;
+    deleteMsg(id);
+    res.redirect("/");
+}
