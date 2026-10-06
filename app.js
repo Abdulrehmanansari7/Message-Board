@@ -2,9 +2,8 @@ import express from "express";
 import dotenv from "dotenv/config";
 import path from "path";
 import { messages } from "./db.js";
-import { deleteMsg } from "./db.js";
 import newRouter from "./routes/newRouter.js";
-import deleteRouter from "./routes/deleteRouter.js";
+
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -20,9 +19,11 @@ app.get("/", (req, res) => {
 });
 
 app.use("/new", newRouter);
-app.use("/delete", deleteRouter);
-// app.use("/new",newRouter);
+app.use((error,req,res,next) =>{
+  console.log(error.message);
+  res.status(500).end(error.message);
+})
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0",() => {
   console.log(`SERVER is listening on ${PORT}`);
 });

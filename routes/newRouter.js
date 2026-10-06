@@ -1,6 +1,5 @@
 import express from "express";
-import {postMsg} from "../controllers/userControllers.js";
-import {removeMsg} from "../controllers/userControllers.js";
+import {postMsg, removeMsg} from "../controllers/userControllers.js";
 
 const newRouter = express.Router();
 
